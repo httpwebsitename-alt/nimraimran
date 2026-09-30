@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Consultation | Nimra Imran Qureshi</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-main: #F7FAFC;
+      --bg-card: #FFFFFF;
+      --primary-sky: #4A90E2;
+      --primary-sky-light: #EBF4FF;
+      --peach-accent: #FFD2C1;
+      --peach-light: #FFF5F2;
+      --mint-accent: #B2EBF2;
+      --text-dark: #2D3748;
+      --text-muted: #718096;
+      --border-color: #E2E8F0;
+      --shadow-sm: 0 4px 15px rgba(74, 144, 226, 0.08);
+      --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.08);
+      --radius: 16px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: #1A202C;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-sky);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo i { color: #FF9B71; }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--primary-sky); }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--primary-sky);
+      border-radius: 2px;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, var(--primary-sky), #357ABD);
+      color: #fff !important;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+      transition: var(--transition);
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(74, 144, 226, 0.4);
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(135deg, var(--primary-sky-light), var(--peach-light));
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    /* CONTACT SECTION */
+    .contact-container {
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+    }
+
+    .contact-info-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-info-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info-card p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 10px;
+      background: var(--primary-sky-light);
+      color: var(--primary-sky);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .info-text h4 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .info-text span {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* FORM STYLES */
+    .contact-form-card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-form-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--text-dark);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      background: var(--bg-main);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-sky);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--primary-sky);
+      color: #fff;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-submit:hover {
+      background: #357ABD;
+      transform: translateY(-2px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 0;
+      margin-top: 4rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-brain"></i>
+        <span>Nimra Imran</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav-btn">Book Consultation</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Get In Touch</h1>
+    <p>Reach out for professional inquiries, psychological consultation, or appointments</p>
+  </section>
+
+  <!-- CONTACT CONTAINER -->
+  <section class="contact-container">
+
+    <!-- CONTACT DETAILS -->
+    <div class="contact-info-card">
+      <h3>Contact Information</h3>
+      <p>Feel free to reach out via email or submit a message form. All communications are kept strictly confidential.</p>
+
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="info-text">
+          <h4>Email Address</h4>
+          <span>nimraimranqureshi2@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="info-text">
+          <h4>Qualification</h4>
+          <span>BS in Clinical Psychology</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+        <div class="info-text">
+          <h4>Consultation Hours</h4>
+          <span>By Appointment Only</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOKING / CONTACT FORM -->
+    <div class="contact-form-card">
+      <h3>Send a Message</h3>
+      <form action="https://formspree.io/f/xvON_YOUR_FORM_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Your Full Name</label>
+          <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject / Inquiry</label>
+          <input type="text" id="subject" name="subject" class="form-control" placeholder="Consultation Inquiry" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" class="form-control" placeholder="Briefly describe your request..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Nimra Imran Qureshi. All Rights Reserved. | Clinical Psychology</p>
+  </footer>
+
+</body>
+</html>
