@@ -1,456 +1,1870 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nimra Imran Qureshi | Clinical Psychologist</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <style>
-    /* =========================================================
-       COLOR PALETTE & CSS VARIABLES
-       Fresh Palette: Sky Blue, Soft Peach, Mint & Warm Cream
-       ========================================================= */
-    :root {
-      --bg-main: #F7FAFC;
-      --bg-card: #FFFFFF;
-      --primary-sky: #4A90E2;
-      --primary-sky-light: #EBF4FF;
-      --peach-accent: #FFD2C1;
-      --peach-light: #FFF5F2;
-      --mint-accent: #B2EBF2;
-      --text-dark: #2D3748;
-      --text-muted: #718096;
-      --border-color: #E2E8F0;
-      --shadow-sm: 0 4px 15px rgba(74, 144, 226, 0.08);
-      --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.08);
-      --radius: 16px;
-      --transition: all 0.3s ease;
-    }
+    <meta charset="UTF-8">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    body {
-      background-color: var(--bg-main);
-      color: var(--text-dark);
-      line-height: 1.6;
-    }
+    <meta name="description"
+          content="Nimra Imran Qureshi — Clinical Psychologist providing compassionate and confidential psychological support.">
 
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-      color: #1A202C;
-    }
+    <title>
+        Nimra Imran Qureshi | Clinical Psychologist
+    </title>
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
 
-    /* =========================================================
-       NAVIGATION BAR
-       ========================================================= */
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 1px solid var(--border-color);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-    }
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    .navbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 2rem;
-    }
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary-sky);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
 
-    .logo i {
-      color: #FF9B71;
-    }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    .nav-links a {
-      font-weight: 500;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-      transition: var(--transition);
-      position: relative;
-    }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--primary-sky);
-    }
+    <style>
 
-    .nav-links a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: var(--primary-sky);
-      border-radius: 2px;
-    }
+        /* =====================================================
+           ROOT / COLOR PALETTE
+        ===================================================== */
 
-    .nav-btn {
-      background: linear-gradient(135deg, var(--primary-sky), #357ABD);
-      color: #fff !important;
-      padding: 0.6rem 1.4rem;
-      border-radius: 30px;
-      box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
-      transition: var(--transition);
-    }
+        :root {
 
-    .nav-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(74, 144, 226, 0.4);
-    }
+            --primary: #2f6f68;
+            --primary-dark: #235650;
+            --secondary: #86b9ad;
 
-    /* =========================================================
-       HERO SECTION
-       ========================================================= */
-    .hero {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
-      align-items: center;
-    }
+            --accent: #d89b72;
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: var(--peach-light);
-      border: 1px solid var(--peach-accent);
-      color: #D9531E;
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
+            --cream: #f8f6f0;
+            --cream-dark: #eeeae0;
 
-    .hero-text h1 {
-      font-size: 3rem;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
+            --white: #ffffff;
 
-    .hero-text h1 span {
-      color: var(--primary-sky);
-      font-style: italic;
-    }
+            --text: #203634;
+            --text-light: #647573;
 
-    .hero-text p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-    }
+            --border: rgba(47, 111, 104, 0.12);
 
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
+            --shadow:
+                0 20px 60px rgba(32, 54, 52, 0.10);
 
-    .btn-primary {
-      background: var(--primary-sky);
-      color: #fff;
-      padding: 0.8rem 1.8rem;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-    }
+            --radius: 24px;
 
-    .btn-primary:hover {
-      background: #357ABD;
-      transform: translateY(-2px);
-    }
+        }
 
-    .btn-secondary {
-      background: var(--peach-light);
-      color: #D9531E;
-      border: 1px solid var(--peach-accent);
-      padding: 0.8rem 1.8rem;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: var(--transition);
-    }
 
-    .btn-secondary:hover {
-      background: var(--peach-accent);
-    }
+        /* =====================================================
+           RESET
+        ===================================================== */
 
-    .hero-card {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--border-color);
-      position: relative;
-      text-align: center;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .profile-avatar {
-      width: 120px;
-      height: 120px;
-      background: linear-gradient(135deg, var(--primary-sky-light), var(--peach-light));
-      border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: var(--primary-sky);
-      border: 4px solid #fff;
-      box-shadow: var(--shadow-sm);
-    }
 
-    .profile-info h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.3rem;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .profile-info p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
 
-    .contact-pills {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-      text-align: left;
-    }
+        body {
 
-    .pill {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--bg-main);
-      padding: 0.8rem 1rem;
-      border-radius: 12px;
-      font-size: 0.9rem;
-    }
+            font-family: "DM Sans", sans-serif;
 
-    .pill i {
-      color: var(--primary-sky);
-      width: 20px;
-      text-align: center;
-    }
+            background:
+                linear-gradient(
+                    180deg,
+                    #fbfaf6 0%,
+                    #f4f7f3 45%,
+                    #ffffff 100%
+                );
 
-    /* =========================================================
-       SERVICES HIGHLIGHT
-       ========================================================= */
-    .section-title {
-      text-align: center;
-      margin: 4rem 0 2rem;
-    }
+            color: var(--text);
 
-    .section-title h2 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
+            line-height: 1.7;
 
-    .section-title p {
-      color: var(--text-muted);
-    }
+            overflow-x: hidden;
+        }
 
-    .services-grid {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
 
-    .service-card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: var(--radius);
-      border: 1px solid var(--border-color);
-      transition: var(--transition);
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-sm);
-      border-color: var(--primary-sky);
-    }
 
-    .service-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      background: var(--primary-sky-light);
-      color: var(--primary-sky);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 1.2rem;
-    }
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
 
-    .service-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
+        .container {
 
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-    footer {
-      background: #fff;
-      border-top: 1px solid var(--border-color);
-      padding: 2rem 0;
-      margin-top: 4rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
+            width: min(1160px, 92%);
 
-    /* =========================================================
-       RESPONSIVE DESIGN
-       ========================================================= */
-    @media (max-width: 768px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
-        display: none;
-      }
-    }
-  </style>
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            padding: 18px 0;
+
+            background:
+                rgba(251, 250, 246, 0.82);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid rgba(47, 111, 104, 0.08);
+        }
+
+
+        nav {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            color: var(--primary);
+        }
+
+
+        .logo-mark {
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            color: white;
+
+            box-shadow:
+                0 8px 20px rgba(47, 111, 104, 0.20);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+        }
+
+
+        .nav-links a {
+
+            padding: 9px 15px;
+
+            border-radius: 12px;
+
+            color: var(--text-light);
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+
+        .nav-links a:hover {
+
+            background: rgba(47, 111, 104, 0.08);
+
+            color: var(--primary);
+        }
+
+
+        .nav-cta {
+
+            background: var(--primary) !important;
+
+            color: white !important;
+
+            padding: 11px 18px !important;
+
+            box-shadow:
+                0 8px 20px rgba(47, 111, 104, 0.20);
+        }
+
+
+        .nav-cta:hover {
+
+            background: var(--primary-dark) !important;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            position: relative;
+
+            padding: 105px 0 90px;
+
+            overflow: hidden;
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+
+            height: 420px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(134, 185, 173, 0.18);
+
+            filter: blur(5px);
+
+            top: -160px;
+
+            right: -120px;
+
+            z-index: -1;
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 260px;
+
+            height: 260px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(216, 155, 114, 0.13);
+
+            bottom: -120px;
+
+            left: -80px;
+
+            z-index: -1;
+        }
+
+
+        .hero-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .eyebrow {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 8px 14px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(47, 111, 104, 0.08);
+
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.4px;
+
+            margin-bottom: 22px;
+        }
+
+
+        .eyebrow i {
+
+            font-size: 10px;
+        }
+
+
+        .hero h1 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size:
+                clamp(48px, 6vw, 76px);
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            color: var(--text);
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+
+            color: var(--primary);
+        }
+
+
+        .hero-text {
+
+            max-width: 650px;
+
+            font-size: 17px;
+
+            color: var(--text-light);
+
+            margin-bottom: 34px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 13px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 14px 21px;
+
+            border-radius: 14px;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+
+        .btn-primary {
+
+            background: var(--primary);
+
+            color: white;
+
+            box-shadow:
+                0 12px 25px rgba(47, 111, 104, 0.20);
+        }
+
+
+        .btn-primary:hover {
+
+            background: var(--primary-dark);
+
+            transform: translateY(-3px);
+        }
+
+
+        .btn-secondary {
+
+            background: white;
+
+            color: var(--primary);
+
+            border: 1px solid var(--border);
+        }
+
+
+        .btn-secondary:hover {
+
+            border-color: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           PROFILE CARD
+        ===================================================== */
+
+        .profile-wrapper {
+
+            position: relative;
+        }
+
+
+        .profile-card {
+
+            position: relative;
+
+            padding: 38px;
+
+            border-radius: 32px;
+
+            background:
+                rgba(255, 255, 255, 0.78);
+
+            backdrop-filter: blur(20px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.8);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .profile-circle {
+
+            width: 115px;
+
+            height: 115px;
+
+            margin-bottom: 25px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dceee8,
+                    #f5e8dc
+                );
+
+            color: var(--primary);
+
+            font-size: 42px;
+
+            box-shadow:
+                inset 0 0 0 8px rgba(255,255,255,0.65);
+        }
+
+
+        .profile-card h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 29px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .profile-title {
+
+            color: var(--primary);
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+
+        .profile-info {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+            padding-top: 20px;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .info-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: var(--text-light);
+
+            font-size: 14px;
+        }
+
+
+        .info-item i {
+
+            width: 34px;
+
+            height: 34px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(47, 111, 104, 0.08);
+
+            color: var(--primary);
+        }
+
+
+        /* =====================================================
+           SECTION
+        ===================================================== */
+
+        section {
+
+            padding: 90px 0;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+        }
+
+
+        .section-label {
+
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size:
+                clamp(34px, 4vw, 48px);
+
+            line-height: 1.15;
+
+            margin-bottom: 14px;
+        }
+
+
+        .section-heading p {
+
+            color: var(--text-light);
+
+            font-size: 16px;
+        }
+
+
+        /* =====================================================
+           EXPERTISE
+        ===================================================== */
+
+        .expertise {
+
+            background:
+                #f1f6f3;
+        }
+
+
+        .expertise-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .expertise-card {
+
+            position: relative;
+
+            padding: 32px;
+
+            background: white;
+
+            border-radius: var(--radius);
+
+            border:
+                1px solid rgba(47,111,104,0.08);
+
+            box-shadow:
+                0 12px 35px rgba(32,54,52,0.06);
+
+            transition: 0.35s;
+        }
+
+
+        .expertise-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 22px 50px rgba(32,54,52,0.11);
+        }
+
+
+        .card-icon {
+
+            width: 56px;
+
+            height: 56px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 17px;
+
+            background:
+                #e4f0ec;
+
+            color: var(--primary);
+
+            font-size: 21px;
+
+            margin-bottom: 23px;
+        }
+
+
+        .expertise-card h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 24px;
+
+            line-height: 1.3;
+
+            margin-bottom: 12px;
+        }
+
+
+        .expertise-card p {
+
+            color: var(--text-light);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           ABOUT / PHILOSOPHY
+        ===================================================== */
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                0.8fr
+                1.2fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .about-visual {
+
+            min-height: 380px;
+
+            border-radius: 32px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #dceee8,
+                    #f8e9dc
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .about-visual::before {
+
+            content: "";
+
+            width: 210px;
+
+            height: 210px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.55);
+
+            position: absolute;
+        }
+
+
+        .about-visual i {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 75px;
+
+            color: var(--primary);
+        }
+
+
+        .about-content .section-label {
+
+            margin-bottom: 10px;
+        }
+
+
+        .about-content h2 {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 45px;
+
+            line-height: 1.15;
+
+            margin-bottom: 20px;
+        }
+
+
+        .about-content p {
+
+            color: var(--text-light);
+
+            margin-bottom: 17px;
+        }
+
+
+        .quote-box {
+
+            margin-top: 28px;
+
+            padding: 20px 23px;
+
+            border-left:
+                4px solid var(--accent);
+
+            background:
+                #faf7f1;
+
+            border-radius:
+                0 15px 15px 0;
+
+            color: var(--text);
+
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+
+            padding-top: 20px;
+
+            padding-bottom: 100px;
+        }
+
+
+        .cta-box {
+
+            padding: 65px 50px;
+
+            border-radius: 32px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #285f59,
+                    #3e7d74
+                );
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 25px 60px rgba(47,111,104,0.22);
+        }
+
+
+        .cta-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+
+            height: 300px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            top: -180px;
+
+            right: -70px;
+        }
+
+
+        .cta-box h2 {
+
+            position: relative;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .cta-box p {
+
+            position: relative;
+
+            max-width: 600px;
+
+            margin: 0 auto 25px;
+
+            color:
+                rgba(255,255,255,0.82);
+        }
+
+
+        .cta-box .btn {
+
+            position: relative;
+
+            background: white;
+
+            color: var(--primary);
+        }
+
+
+        .cta-box .btn:hover {
+
+            transform: translateY(-3px);
+
+            background: #f5f5f5;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background: #183c38;
+
+            color: white;
+
+            padding: 35px 0;
+        }
+
+
+        .footer-content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .footer-brand {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 21px;
+        }
+
+
+        .footer-text {
+
+            color:
+                rgba(255,255,255,0.62);
+
+            font-size: 13px;
+        }
+
+
+        .social-links {
+
+            display: flex;
+
+            gap: 9px;
+        }
+
+
+        .social-links a {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 11px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .social-links a:hover {
+
+            background:
+                rgba(255,255,255,0.16);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           ANIMATION
+        ===================================================== */
+
+        @keyframes fadeUp {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(20px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        .hero-content {
+
+            animation:
+                fadeUp 0.8s ease both;
+        }
+
+
+        .profile-wrapper {
+
+            animation:
+                fadeUp 0.8s 0.15s ease both;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+
+            .hero {
+
+                padding-top: 70px;
+            }
+
+
+            .profile-card {
+
+                max-width: 600px;
+
+                margin: auto;
+            }
+
+
+            .expertise-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+
+            .about-visual {
+
+                min-height: 300px;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            header {
+
+                padding: 12px 0;
+            }
+
+
+            .nav-links {
+
+                display: none;
+            }
+
+
+            .hero h1 {
+
+                font-size: 48px;
+
+                letter-spacing: -1px;
+            }
+
+
+            .hero-text {
+
+                font-size: 15px;
+            }
+
+
+            section {
+
+                padding: 70px 0;
+            }
+
+
+            .about-content h2 {
+
+                font-size: 36px;
+            }
+
+
+            .cta-box {
+
+                padding: 45px 25px;
+            }
+
+
+            .cta-box h2 {
+
+                font-size: 34px;
+            }
+
+
+            .footer-content {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .logo span {
+
+                font-size: 17px;
+            }
+
+
+            .hero {
+
+                padding-top: 55px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 41px;
+            }
+
+
+            .profile-card {
+
+                padding: 27px;
+            }
+
+
+            .hero-buttons {
+
+                flex-direction: column;
+            }
+
+
+            .hero-buttons .btn {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <i class="fa-solid fa-brain"></i>
-        <span>Nimra Imran</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="certificates.html">Certificates</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a href="contact.html" class="nav-btn">Book Consultation</a>
-    </nav>
-  </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-text">
-      <div class="hero-badge">
-        <i class="fa-solid fa-shield-heart"></i> Compassionate & Confidential Care
-      </div>
-      <h1>Empower Your Mind, <span>Restore</span> Your Peace.</h1>
-      <p>Welcome! I am Nimra Imran Qureshi, a dedicated Clinical Psychologist specializing in mental well-being, stress management, academic recharge, and relationship dynamics.</p>
-      <div class="hero-actions">
-        <a href="contact.html" class="btn-primary">Get Started</a>
-        <a href="certificates.html" class="btn-secondary">View Qualifications</a>
-      </div>
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#home" class="logo">
+
+                <span class="logo-mark">
+                    <i class="fa-solid fa-brain"></i>
+                </span>
+
+                <span>
+                    Nimra Imran
+                </span>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#expertise">
+                    Expertise
+                </a>
+
+                <a href="#qualifications">
+                    Qualifications
+                </a>
+
+                <a href="#contact"
+                   class="nav-cta">
+
+                    Book Consultation
+
+                </a>
+
+            </div>
+
+        </nav>
+
     </div>
 
-    <div class="hero-card">
-      <div class="profile-avatar">
-        <i class="fa-solid fa-user-nurse"></i>
-      </div>
-      <div class="profile-info">
-        <h3>Nimra Imran Qureshi</h3>
-        <p>BS in Clinical Psychology</p>
-      </div>
-      <div class="contact-pills">
-        <div class="pill">
-          <i class="fa-solid fa-envelope"></i>
-          <span>nimraimranqureshi2@gmail.com</span>
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main id="home">
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    Compassionate & Confidential Care
+
+                </div>
+
+
+                <h1>
+
+                    Empower Your Mind,
+                    <span>Restore Your Peace.</span>
+
+                </h1>
+
+
+                <p class="hero-text">
+
+                    Welcome! I am Nimra Imran Qureshi,
+                    a dedicated Clinical Psychologist specializing
+                    in mental well-being, stress management,
+                    academic recharge, and relationship dynamics.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#contact"
+                       class="btn btn-primary">
+
+                        Get Started
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="#qualifications"
+                       class="btn btn-secondary">
+
+                        View Qualifications
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFILE CARD -->
+
+            <div class="profile-wrapper">
+
+                <div class="profile-card">
+
+
+                    <div class="profile-circle">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <h2>
+                        Nimra Imran Qureshi
+                    </h2>
+
+
+                    <div class="profile-title">
+
+                        Clinical Psychology Graduate
+
+                    </div>
+
+
+                    <div class="profile-info">
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-graduation-cap"></i>
+
+                            <span>
+                                BS in Clinical Psychology
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <span>
+                                nimraimranqureshi2@gmail.com
+                            </span>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                            <span>
+                                Mental Well-being & Support
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="pill">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span>Clinical Psychology Graduate</span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERTISE
+===================================================== -->
+
+<section class="expertise"
+         id="expertise">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Areas of Expertise
+            </div>
+
+            <h2>
+                Support Designed Around You
+            </h2>
+
+            <p>
+                Professional therapy and counseling tailored
+                to your personal journey and individual needs.
+            </p>
+
         </div>
-      </div>
+
+
+
+        <div class="expertise-grid">
+
+
+            <!-- CARD 1 -->
+
+            <div class="expertise-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-people-arrows"></i>
+
+                </div>
+
+
+                <h3>
+                    Trauma & Relationship Support
+                </h3>
+
+
+                <p>
+
+                    Guidance for navigating complex emotional
+                    dynamics, trauma bonds, and building healthier
+                    interpersonal relationships.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="expertise-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+
+                <h3>
+                    Academic Recharge & Time Management
+                </h3>
+
+
+                <p>
+
+                    Practical strategies to manage time,
+                    reduce academic stress, and create a
+                    healthier balance for academic success.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="expertise-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-wind"></i>
+
+                </div>
+
+
+                <h3>
+                    Stress & Anxiety Management
+                </h3>
+
+
+                <p>
+
+                    Cognitive and behavioral tools designed
+                    to help regulate anxiety, manage stress,
+                    and support overall emotional well-being.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
     </div>
-  </section>
 
-  <!-- SERVICES HIGHLIGHT -->
-  <section>
-    <div class="section-title">
-      <h2>Areas of Expertise</h2>
-      <p>Professional therapy and counseling tailored to your personal journey</p>
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="about-visual">
+
+                <i class="fa-solid fa-seedling"></i>
+
+            </div>
+
+
+
+            <div class="about-content">
+
+                <div class="section-label">
+                    A Safe Space
+                </div>
+
+
+                <h2>
+                    Your Well-being
+                    Comes First.
+                </h2>
+
+
+                <p>
+
+                    Mental well-being is an important part of
+                    living a balanced and fulfilling life.
+                    Every person's journey is different,
+                    and support should reflect that individuality.
+
+                </p>
+
+
+                <p>
+
+                    Through compassionate guidance and practical
+                    strategies, the focus is on creating a
+                    comfortable environment where concerns can
+                    be understood and explored.
+
+                </p>
+
+
+                <div class="quote-box">
+
+                    "Small steps toward understanding yourself
+                    can lead to meaningful changes."
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-heart-crack"></i></div>
-        <h3>Trauma & Relationship Support</h3>
-        <p>Expert guidance on navigating complex emotional dynamics, trauma bonds, and building healthy interpersonal relationships.</p>
-      </div>
+</section>
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-clock"></i></div>
-        <h3>Academic Recharge & Time Management</h3>
-        <p>Specialized strategies to master time, relieve academic stress, and achieve balanced academic success.</p>
-      </div>
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fa-solid fa-spa"></i></div>
-        <h3>Stress & Anxiety Management</h3>
-        <p>Practical cognitive and behavioral tools to regulate anxiety, reduce stress, and improve overall mental well-being.</p>
-      </div>
+
+<!-- =====================================================
+     QUALIFICATIONS
+===================================================== -->
+
+<section id="qualifications"
+         style="background:#f7f8f5;">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Qualifications
+            </div>
+
+            <h2>
+                Education & Professional Focus
+            </h2>
+
+            <p>
+                Academic background and areas of professional
+                interest in clinical psychology.
+            </p>
+
+        </div>
+
+
+
+        <div class="expertise-grid">
+
+
+            <div class="expertise-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                </div>
+
+
+                <h3>
+                    BS in Clinical Psychology
+                </h3>
+
+
+                <p>
+
+                    Academic background in Clinical Psychology
+                    with a focus on understanding human behavior,
+                    emotional well-being, and psychological support.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="expertise-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+
+                <h3>
+                    Clinical Psychology
+                </h3>
+
+
+                <p>
+
+                    Professional interest in psychological
+                    well-being, emotional regulation,
+                    stress management, and interpersonal dynamics.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="expertise-card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+
+                </div>
+
+
+                <h3>
+                    Compassionate Support
+                </h3>
+
+
+                <p>
+
+                    A supportive and confidential approach
+                    centered around listening, understanding,
+                    and practical guidance.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 Nimra Imran Qureshi. All Rights Reserved. | Clinical Psychology</p>
-  </footer>
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT / CTA
+===================================================== -->
+
+<section class="cta"
+         id="contact">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+
+            <h2>
+                Ready to Take the First Step?
+            </h2>
+
+
+            <p>
+
+                If you are looking for a supportive space
+                to discuss your concerns, reach out and
+                begin your journey toward better well-being.
+
+            </p>
+
+
+            <a href="mailto:nimraimranqureshi2@gmail.com"
+               class="btn">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Book a Consultation
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <div class="footer-brand">
+                    Nimra Imran Qureshi
+                </div>
+
+                <div class="footer-text">
+
+                    Clinical Psychology Graduate
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-text">
+
+                © 2026 Nimra Imran Qureshi.
+                All Rights Reserved.
+
+            </div>
+
+
+            <div class="social-links">
+
+                <a href="mailto:nimraimranqureshi2@gmail.com"
+                   aria-label="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</footer>
+
 
 </body>
+
 </html>
+```
